@@ -1,0 +1,31 @@
+$pinkColor:#FF38AC;
+$titleFont:.9rem;
+$sm:640px;
+$md:768px;
+$lg:1024px;
+$xl:1280px;
+$max-xs:20rem;
+$max-sm:24rem;
+$max-md:28rem;
+$max-xl:32rem;
+$max-2xl:36rem;
+$max-3xl:42rem;
+$max-4xl:48rem;
+$max-5xl:56rem;
+$max-6xl:64rem;
+$max-7xl:72rem;
+$max-8xl:80rem;
+
+
+
+@mixin flexRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flexCol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

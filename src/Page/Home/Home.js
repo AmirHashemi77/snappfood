@@ -1,9 +1,10 @@
 import React from 'react';
-import style from "./home.module.scss";
+import Header from '../../Component/Header/Header';
+
 const Home = () => {
     return (
         <div>
-            Home
+            <Header/>
         </div>
     );
 };

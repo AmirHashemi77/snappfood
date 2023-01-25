@@ -1,0 +1,11 @@
+@use '/src/variable.scss' as g;
+
+.container{
+    display: grid;
+    grid-column: 6;
+    grid-row: 2;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: $g.5xl;
+}
