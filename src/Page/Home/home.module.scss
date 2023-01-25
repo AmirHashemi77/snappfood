@@ -1,0 +1,6 @@
+@use '/src/variable.scss' as g;
+
+.main{
+    max-width: g.$max-8xl;
+    margin: 0 auto;
+}
