@@ -10,6 +10,18 @@
     src: url(../public/Font/IRANSansMobile_Bold.ttf);
 
 }
+@font-face {
+    font-family: 'snapfont';
+    font-weight: normal;
+    src: url(../public/Font/SnappWeb2.0-Regular.woff);
+
+}
+@font-face {
+    font-family: 'snapfont';
+    font-weight: bold;
+    src: url(../public/Font/SnappWeb2.0-Bold.woff);
+
+}
 body{
     width: 100%;
 
