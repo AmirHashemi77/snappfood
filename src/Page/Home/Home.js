@@ -1,6 +1,7 @@
 import React from 'react';
 import AppBanner from '../../Component/Banners/AppBanner';
 import SignInBanner from '../../Component/Banners/SignInBanner';
+import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
 import RestrantCategory from '../../Component/RestrantCategory/RestrantCategory';
 import style from './home.module.scss'
@@ -12,8 +13,8 @@ const Home = () => {
                 <RestrantCategory/>
                 <AppBanner/>
                 <SignInBanner/>
-
             </div>
+            <Footer/>
         </>
     );
 };
