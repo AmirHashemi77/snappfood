@@ -1,4 +1,5 @@
-export const city= ['تهران',
+export const city= [
+    'تهران',
     'مشهد',
     'اصفهان',
     'کرج',

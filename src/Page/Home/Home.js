@@ -1,6 +1,7 @@
 import React from 'react';
 import AppBanner from '../../Component/Banners/AppBanner';
 import SignInBanner from '../../Component/Banners/SignInBanner';
+import CitySection from '../../Component/CitySection/CitySection';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
 import RestrantCategory from '../../Component/RestrantCategory/RestrantCategory';
@@ -14,6 +15,7 @@ const Home = () => {
                 <AppBanner/>
                 <SignInBanner/>
             </div>
+            <CitySection/>
             <Footer/>
         </>
     );
