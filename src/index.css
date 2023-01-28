@@ -22,10 +22,8 @@
     src: url(../public/Font/SnappWeb2.0-Bold.woff);
 
 }
-body{
-    width: 100%;
 
-}
+
 *{
     box-sizing: border-box;
     color:#333;

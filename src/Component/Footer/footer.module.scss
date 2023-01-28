@@ -39,7 +39,9 @@ footer{
             }
             .socialMedia{
                 @include g.flexRow;
+                justify-content: flex-start;
                 margin: 20px 0;
+                flex-wrap: wrap;
 
                 .socialItem{
                     display: flex;
