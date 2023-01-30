@@ -2,10 +2,7 @@
 
 
 .main{
-    width: 100%;
-    max-width: g.$max-8xl;
-    margin: 0 auto;
-    padding: 0 20px;
+   @include g.main;
        
     
 }

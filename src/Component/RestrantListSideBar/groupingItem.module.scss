@@ -1,0 +1,23 @@
+@use '/src/variable.scss' as g;
+
+.container{
+    @include g.flexRow;
+    cursor: pointer;
+    width: 100%;
+    
+
+    .picAndName{
+        @include g.flexRow;
+        gap: 10px;
+         
+        img{
+           width: 2rem;
+           height: 2rem;
+        }
+
+        p{
+            font-size: .85rem;
+        }
+
+    }
+}

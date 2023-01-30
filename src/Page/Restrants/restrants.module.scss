@@ -1,0 +1,58 @@
+@use '/src/variable.scss' as g;
+
+.breadCrump{
+    font-size: .7rem;
+    color: #888;
+    padding: 10px 20px;
+}
+.main{
+    @include g.main;
+    @include g.flexCol;
+    align-items: flex-start;
+    margin-top: 2rem;
+
+    max-width: 85rem;
+
+    
+
+    
+
+    .flexContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        margin: 3rem 0;
+
+        .sideBar{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+            width: 100%;
+            @media screen and (min-width:g.$md) {
+                width: 60%;
+            }
+            @media screen and (min-width:g.$xl) {
+                width: 30%;
+            }
+            .priceFilter{
+                display: none;
+                width: 100%;
+                @media screen and (min-width:g.$lg) {
+                    display: block;
+                }
+
+            }
+
+        }
+
+        @media screen and (min-width:g.$md) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: stretch;
+            
+
+        }
+    }
+}

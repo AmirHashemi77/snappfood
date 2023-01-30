@@ -1,0 +1,23 @@
+@use '/src/variable.scss' as g;
+
+
+
+.container{
+    @include g.flexCol;
+    align-items: flex-start;
+    gap: 20px;
+    
+
+
+    .title{
+        padding: 15px 10px;
+        background-color:#F3F4F4;
+        border-radius: 10px;
+        font-size: .85rem;
+        color: #444;
+        width: 100%;
+
+    }
+
+    
+}
