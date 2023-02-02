@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import style from './restrants.module.scss';
 import CategoryList from '../../Component/Header/CategoryList';
 import Header from '../../Component/Header/Header';
@@ -9,10 +9,16 @@ import Footer from '../../Component/Footer/Footer';
 import RestrantSort from '../../Component/RestrantsSortSection/RestrantSort';
 import RestrantFilter from '../../Component/RestrantsFilter/RestrantFilter';
 import RestrantPriceFilter from '../../Component/RestrantPriceFilter/RestrantPriceFilter';
-
+import { useParams } from 'react-router-dom';
 
 const Restrants = () => {
-    console.log(window.innerWidth);
+    const sideBar=useRef();
+    const parmas=useParams()
+    
+    
+  
+
+    
     return (
         <>
             <Header/>
@@ -22,9 +28,12 @@ const Restrants = () => {
             <div className={style.main}>
                 <RestrantSort/>
                 <div className={style.flexContainer}>
-                        <div className={style.sideBar}>
+                        <div ref={sideBar} className={style.sideBar}>
                             
-                            <RestrantListSideBar/>
+                            { 
+                           ( parmas.category==='restrant' || parmas.category==='cofe' ||parmas.category==='bakery') && 
+                            <RestrantListSideBar />
+                            }
                             <div className={style.priceFilter}><RestrantPriceFilter/></div>
                             <RestrantFilter/>
                         </div>

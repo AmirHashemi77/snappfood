@@ -5,19 +5,48 @@
 .container{
     @include g.flexCol;
     align-items: flex-start;
-    gap: 20px;
+   
     
 
 
-    .title{
+    .unActiveLink{
+        @include g.flexRow;
+        width: 100%;
         padding: 15px 10px;
+        margin: 5px 0;
+        cursor: pointer;
+        font-size: .85rem;
+    
+        
+    }
+    .activeLink{
+        @include g.flexRow;
+        width: 100%;
+        padding: 15px 10px;
+        margin: 5px 0;
+        cursor: pointer;
         background-color:#F3F4F4;
         border-radius: 10px;
         font-size: .85rem;
         color: #444;
-        width: 100%;
+        font-weight: bold
 
     }
 
+
     
+
+    
+}
+.backBtn{
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    margin: 10px ;
+
+
+    span{
+        margin: 0 10px;
+    }
+
 }

@@ -1,4 +1,4 @@
-export const restrantCategoryData=[
+export const headerRestrantCategoryData=[
     {
         name:'irani',
         title:'ایرانی',

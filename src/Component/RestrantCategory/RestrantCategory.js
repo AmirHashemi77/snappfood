@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './restrantCategory.module.scss'
 import RestrantCategoryItem from './RestrantCategoryItem';
-import { restrantCategoryData } from '../../utils/restrantCtegoryData';
+import { headerRestrantCategoryData } from '../../utils/headerRestrantCtegoryData';
 const RestrantCategory = () => {
     return (
         
@@ -10,7 +10,7 @@ const RestrantCategory = () => {
             
                 <h5 className={style.title}>دسته بندی ها</h5>
                 <div className={style.itemWrapper}>
-                    {restrantCategoryData.map((item)=>{
+                    {headerRestrantCategoryData.map((item)=>{
                     return    <RestrantCategoryItem key={item.name} name={item.name} title={item.title}/>
 
                     })}
