@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import style from './restrantCart.module.scss';
 const RestrantCart = () => {
     return (
-        <div className={style.container}>
+        <Link to='/menu/111' className={style.container}>
             <div className={style.imageContainer}>
                 <img className={style.mainImage} src="/images/test.jpeg" alt="" />
                 <div className={style.offDetail}>
@@ -29,7 +30,7 @@ const RestrantCart = () => {
             </div>
 
             
-        </div>
+        </Link>
     );
 };
 

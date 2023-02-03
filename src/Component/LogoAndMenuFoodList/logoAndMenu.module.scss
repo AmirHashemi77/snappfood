@@ -1,0 +1,11 @@
+@use '/src/variable.scss' as g;
+
+
+
+.container{
+    @include g.flexCol;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+    gap: 30px;
+}
