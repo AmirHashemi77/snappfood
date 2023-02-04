@@ -10,11 +10,20 @@ import RestrantSort from '../../Component/RestrantsSortSection/RestrantSort';
 import RestrantFilter from '../../Component/RestrantsFilter/RestrantFilter';
 import RestrantPriceFilter from '../../Component/RestrantPriceFilter/RestrantPriceFilter';
 import { useParams } from 'react-router-dom';
+import BreadCrumb from '../../Component/BreadCrumb/BreadCrumb';
 
 const Restrants = () => {
     const sideBar=useRef();
     const parmas=useParams()
     
+    window.onwheel=(e)=>{
+        if(e.deltaY>0){
+            sideBar.current.scrollBy(0,sideBar.current.offsetHeight)
+     }else{
+         sideBar.current.scrollBy(0,-sideBar.current.offsetHeight)
+        }
+     
+     }
     
   
 
@@ -23,7 +32,7 @@ const Restrants = () => {
         <>
             <Header/>
             <CategoryList/>
-            <p className={style.breadCrump}>محل درج برید کرامپ</p>
+            <BreadCrumb/>
 
             <div className={style.main}>
                 <RestrantSort/>

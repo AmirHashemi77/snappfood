@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import style from './logoAndMenu.module.scss';
 import MenuList from './MenuList';
 import RestrantParticulars from './RestrantParticulars';
 const LogoAndMenu = () => {
+    const containerEl=useRef()
+   
+
+
     return (
-        <div className={style.container}>
+        <div ref={containerEl} className={style.container}>
             <RestrantParticulars/>
             <MenuList/>
         </div>
