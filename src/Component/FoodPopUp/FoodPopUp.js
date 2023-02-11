@@ -4,9 +4,11 @@ import CommentsItem from '../Comments/CommentsItem';
 import FoodDetail from './FoodDetail';
 import style from './foodPopUp.module.scss';
 const FoodPopUp = () => {
+   
     return (
-        <div className={style.backDrop}>
-            <div className={style.container}>
+        <>
+        <div className={style.backDrop}></div>
+        <div className={style.container}>
                 <FoodDetail/>
                 <Comments>
                     <CommentsItem/>
@@ -15,8 +17,7 @@ const FoodPopUp = () => {
                     <CommentsItem/>
                 </Comments>
             </div>
-
-        </div>
+        </>
     );
 };
 

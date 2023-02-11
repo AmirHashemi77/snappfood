@@ -1,9 +1,17 @@
 import React from 'react';
 import style from './foodItem.module.scss'
+import { useDispatch } from 'react-redux';
+import { uiSliceAction } from '../../Store/Slice/uiSlice/uiSlice';
+
 const FoodItem = () => {
+    const dispatch=useDispatch();
+    const foodPopUpHandle=()=>{
+        dispatch(uiSliceAction.popUpHandler('food'))
+    }
+
     return (
-        <div className={style.container}>
-            <div className={style.details}>
+        <div  className={style.container}>
+            <div onClick={foodPopUpHandle} className={style.details}>
                 <div className={style.description}>
                     <h5 className={style.title}>پتزا پنجره ای</h5>
                     <p className={style.subtitle}>ژامبون گوشت، سوسیس، قارچ، فلفل دلمه ای، سس و پنیر مخصوص پرپروک</p>

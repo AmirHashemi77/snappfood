@@ -6,9 +6,10 @@ import CategoryList from './CategoryList';
 import style from './header.module.scss'
 import LogedInBtn from './LogedInBtn';
 import NotLogedInBtns from './NotLogedInBtns';
+import { useSelector } from 'react-redux';
 const Header = () => {
 
-
+    const isAuthed=useSelector((state)=>state.auth.authed)
     
     const loc=useLocation()
     
@@ -38,9 +39,9 @@ const Header = () => {
                             </div>
 
                    
-                         
-                            {/* <NotLogedInBtns/> */}
-                            <LogedInBtn/>
+                         {isAuthed ? <LogedInBtn/> : <NotLogedInBtns/>}
+                            
+                            
 
                 </div>
 

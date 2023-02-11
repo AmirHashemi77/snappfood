@@ -3,7 +3,7 @@
 
 
 .backDrop{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -13,24 +13,23 @@
 
 
 
-    .container{
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: translate(50%,-50%);
-            padding: 5px 20px;
-            border-radius: 10px;
-            background-color: #fff;
-            width: 80%;
-
-
-            @media screen and (min-width:g.$sm) {
-                width: 30rem;
-            }
-
-
-
-           
-    }
     
+}
+.container{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        padding: 5px 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        width: 80%;
+        z-index: 80;
+
+
+        @media screen and (min-width:g.$sm) {
+            width: 30rem;
+        }
+
+ 
 }

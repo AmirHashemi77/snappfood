@@ -5,9 +5,11 @@ import Comments from '../Comments/Comments';
 import CommentsItem from '../Comments/CommentsItem';
 import RateSection from './RateSection';
 const RestrantPopUp = () => {
+            
     return (
-        <div className={style.backDrop}>
-            <div className={style.container}>
+        <>
+        <div className={style.backDrop}></div>
+        <div className={style.container}>
                 <RestrantDetail/>
                 <div className={style.wrap}>
                     <RateSection/>
@@ -20,9 +22,8 @@ const RestrantPopUp = () => {
                     </Comments>
 
                 </div>
-            </div>
-
         </div>
+        </>
     );
 };
 

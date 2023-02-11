@@ -5,14 +5,19 @@ import LogoAndMenu from '../../Component/LogoAndMenuFoodList/LogoAndMenu';
 import FoodListContainer from '../../Component/FoodList/FoodListContainer';
 import Footer from '../../Component/Footer/Footer';
 import CartContainer from '../../Component/CartSection/CartContainer';
-// import RestrantPopUp from '../../Component/RestrantPopUp/RestrantPopUp';
-// import FoodPopUp from '../../Component/FoodPopUp/FoodPopUp';
+import { useSelector } from 'react-redux';
+import RestrantPopUp from '../../Component/RestrantPopUp/RestrantPopUp';
+import FoodPopUp from '../../Component/FoodPopUp/FoodPopUp';
 const FoodList = () => {
+
+  const showFoodPopUp=useSelector((state)=>state.ui.showFoodPopUp)
+  const showRestrantPopUp=useSelector((state)=>state.ui.showRestrantPopUp)
+  
     return (
         <>
           <Header/>
-          {/* <FoodPopUp/> */}
-          {/* <RestrantPopUp/> */}
+          {showFoodPopUp && <FoodPopUp/>}
+          {showRestrantPopUp && <RestrantPopUp/>}
           <div className={style.container}>
             <p className={style.breadCrumb}>محل درج برید کرامب</p>
             <div className={style.main}>
