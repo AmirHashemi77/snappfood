@@ -25,6 +25,9 @@
                     font-size: .85rem;
 
                 }
+                .price{
+                    font-family: 'numberFont';
+                }
             }
 
     }
@@ -37,6 +40,7 @@
         .totalTitle , .totalPrice{
             font-size: .9rem;
             font-weight: bold;
+            font-family: 'numberFont';
         }
     }
 

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import style from './restrantCategoryItem.module.scss';
 
 
-const RestrantCategoryItem = ({name,title}) => {
+const RestrantCategoryItem = ({name,title,url}) => {
     return (
         
-        <Link to='/service/restrant' className={style.container}>
+        <Link to={`/service/restrant/${url}`} className={style.container}>
         <img src={`/images/type-of-restrant/${name}.jpeg`} alt={name} />
         <div className={style.titleWrapper}>
                 <p>{title}</p>

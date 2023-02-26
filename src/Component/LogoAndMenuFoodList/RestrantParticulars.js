@@ -1,9 +1,10 @@
 import React from 'react';
 import style from './restrantParticulars.module.scss'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { uiSliceAction } from '../../Store/Slice/uiSlice/uiSlice';
 const RestrantParticulars = () => {
-
+    const currentRestrant=useSelector((state)=>state.restrants.currentRestrant)
+    
     const dispatch=useDispatch()
 
     const restrantPopUpHandler=()=>{
@@ -12,14 +13,14 @@ const RestrantParticulars = () => {
     return (
         <div className={style.container}>
             <div className={style.particular}>
-                <img className={style.logo} src="/images/test2.jpeg" alt="logo" />
+                <img className={style.logo} src={`/images/bgAndLogo/${currentRestrant.logo}.jpeg`} alt="logo" />
                 <div className={style.details}>
                     <div className={style.rate}>
                     <svg width="12" height="12" viewBox="0 1.5 12 12" fill="#FFCE00"><path fillRule="evenodd" clipRule="evenodd" d="M5.99984 9.62097L2.42572 11.5L3.10832 7.52016L0.216797 4.70163L4.21278 4.12098L5.99984 0.5L7.7869 4.12098L11.7829 4.70163L8.89136 7.52016L9.57395 11.5L5.99984 9.62097Z"></path></svg>
-                    <span className={style.rateNum}>۴.۲</span>
+                    <span className={style.rateNum}>{currentRestrant.rate}</span>
                     <span className={style.commentNum}>{`(۲,۱۹۴ نظر)`}</span>
                     </div>
-                    <h3 className={style.title}>پیتزا پرپروک (گیشا)</h3>
+                    <h3 className={style.title}>{currentRestrant.title}</h3>
                 </div>
             </div>
             <button onClick={restrantPopUpHandler} className={style.btn}>

@@ -4,14 +4,18 @@ const initialState={
     showFoodPopUp:false,
     showRestrantPopUp:false,
     showUserMenu:false,
-    showLoginPopUp:false
+    showLoginPopUp:false,
+    showLoading:false,
+    showSearchInput:false,
+    showSubmitAlert:false,
+    
 }
 
 const uiSlice=createSlice({
     name:'ui',
     initialState,
     reducers:{
-        popUpHandler:(state,action)=>{
+        popUpHandler(state,action){
             if(action.payload==='restrant'){
                 state.showRestrantPopUp=!state.showRestrantPopUp;
                 if(state.showRestrantPopUp){
@@ -37,8 +41,24 @@ const uiSlice=createSlice({
                 }
             }
         },
-        userMenuHandler:(state)=>{
+        userMenuHandler(state){
             state.showUserMenu=!state.showUserMenu;
+        },
+        loadingHandler(state,action){
+                state.showLoading=action.payload;
+                
+        },
+        activeSearchInput(state){
+                state.showSearchInput=true
+        },
+        inActiveSearchInput(state){
+            state.showSearchInput=false
+        },
+       
+        submitAlertHandler(state,action){
+            state.showSubmitAlert=action.payload;
+            
+            
         }
     }
 })

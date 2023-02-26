@@ -7,9 +7,11 @@
     gap: 25px;
 
     @media screen and (min-width:g.$lg) {
-        grid-template-columns: repeat(2,auto);
+        grid-template-columns: repeat(2,1fr);
+        
+        
     }
     @media screen and (min-width:g.$xl) {
-        grid-template-columns: repeat(3,auto);
+        grid-template-columns: repeat(3,1fr);
     }
 }

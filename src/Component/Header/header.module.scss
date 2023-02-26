@@ -78,39 +78,7 @@ header{
                     }
                     
                 }
-                .searchInput{
-                    display: none;
-                    @media screen and (min-width: g.$lg) {
-                        @include g.flexRow;
-                        flex: 1;
-                        margin: 0 20px;
-                        max-width: 30rem;
-                        justify-self: right;
-                       
-                      }
-                   
-                    
-                    
-    
-                    .searchIcon{
-                        @include g.flexRow;
-                        background-color:#EAEDF0 ;
-                        padding: 15px;
-                        border-radius: 0 10px 10px 0;
-                    }
-                    p{
-                        background-color: #EAEDF0;
-                        color: #949495;
-                        flex: 1;
-                        border: none;
-                        padding: 13px;
-                        border-radius: 10px 0 0 10px;
-                        &:focus{
-                            outline: 0;
-                        }
-                        
-                }
-            }
+                
             
            
 

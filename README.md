@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Clone Of Snappfood
+### Snappfood is an online food ordering platform
+### [Clone Of Snappfood Link](https://snappfood.amirhashemi776.ir/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+![Home](https://s2.uupload.ir/files/home1_o596.png)
 
-In the project directory, you can run:
+---
+ This project is a clone of the Snappfood website, Snappfood is an online food ordering platform, and I tried to implement the front-end part of this website responsively.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ #### This project has been implemented using the following technologies:
+ 
+ - React
+ - React Router
+ - Redux/ReduxTolkit
+ - Sass
+![Home](https://s2.uupload.ir/files/home2_vkn7.png)
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - View the list of restrants and cofe, Etc. with different categories
+ - View menu of restrants
+ - View Details of food
+ - Logging in to the site and order food 
+ 
+---
 
-### `npm test`
+ ## Login
+ 
+ 
+ 
+>json-server is used for login system and shopping cart and restrants information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## View ShopList
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  You can see a list of different restrants and cofe, Etc . based on the type of activity, foods and different topics
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![ShopList](https://s2.uupload.ir/files/restrantlist_2qk7.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Shop Menu Details
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+ Each Shop has its own page that contains information such as :
+ - Menu
+ - Comments
+ - Cart
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ ![menuList](https://s2.uupload.ir/files/foodlist_a6e0.png)
 
-### Analyzing the Bundle Size
+## Foods Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Each food has a pop-up included:
+- ingredients
+- rate
+- comments
+- image of food
 
-### Making a Progressive Web App
+![foodDetail](https://s2.uupload.ir/files/fooddetail_p2l0.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+##  signUp
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can register with your mobile number
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## search
+
+You can find shops based on the name of the shop in the search field
+![search](https://s2.uupload.ir/files/search_geto.png)
+---
+
+
+
+To see the original version of the Snappfood site, refer to the link below:
+
+[Snappfood](https://snappfood.ir/)
+
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+
+## Authors
+
+- [@octokatherine](https://www.github.com/octokatherine)
+
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /api/items
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+
+#### Get item
+
+```http
+  GET /api/items/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### add(num1, num2)
+
+Takes two numbers and returns the sum.
+
+
+## Appendix
+
+Any additional information goes here
+

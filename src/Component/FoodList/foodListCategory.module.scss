@@ -26,7 +26,7 @@
 
 
             @media screen and (min-width:g.$lg) {
-                grid-template-columns: repeat(2,auto);
+                grid-template-columns: repeat(2,1fr);
             }
         }
 

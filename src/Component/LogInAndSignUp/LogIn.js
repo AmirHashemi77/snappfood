@@ -1,13 +1,18 @@
-import React, {  useRef } from 'react';
+import React, {  useEffect, useRef } from 'react';
 import style from './logIn.module.scss';
 import { useDispatch } from 'react-redux';
 import { uiSliceAction } from '../../Store/Slice/uiSlice/uiSlice';
+import { register } from '../../Store/action/registerAction';
 const LogIn = () => {
     const phoneInput=useRef()
     const nextBtn=useRef()
     const dispatch=useDispatch()
+    useEffect(()=>{
+        nextBtn.current.disabled=true;  
+    },[])
         const phoneHandler=()=>{
-            if(phoneInput.current.value.length===11){
+            const mobileNumberReg=new RegExp(/09(1[0-9]|3[1-9]|2[1-9])-?[0-9]{3}-?[0-9]{4}/)
+            if(phoneInput.current.value.length===11 && mobileNumberReg.test(phoneInput.current.value)){
                 nextBtn.current.disabled=false;
             }else{
                 nextBtn.current.disabled=true;
@@ -16,6 +21,10 @@ const LogIn = () => {
         }
         const showLoginPopUp=()=>{
             dispatch(uiSliceAction.popUpHandler('logIn'))
+        }
+
+        const registering=()=>{
+            dispatch(register(phoneInput.current.value))
         }
     return (
         <div className={style.container}>
@@ -28,10 +37,10 @@ const LogIn = () => {
             <h3 className={style.title}><span>ورود</span> یا <span>عضویت</span></h3>
             <div className={style.inputContainer}>
                 <p>شماره تلفن همراه</p>
-                <input onChange={phoneHandler} ref={phoneInput} className={style.phoneInput} type="text" />
+                <input onChange={phoneHandler}  ref={phoneInput} className={style.phoneInput} type="text" />
                 <small>شماره ۰۹ شروع میشود</small>
             </div>
-            <button ref={nextBtn} disabled className={style.nextBtn}>ادامه</button>
+            <button onClick={registering} ref={nextBtn}  className={style.nextBtn} >ادامه</button>
         </div>
     );
 };

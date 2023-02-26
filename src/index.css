@@ -22,6 +22,12 @@
     src: url(../public/Font/SnappWeb2.0-Bold.woff);
 
 }
+@font-face {
+    font-family: 'numberFont';
+    font-weight: normal;
+    src: url(../public/Font/IRANSansXFaNum-Bold.ttf);
+
+}
 
 
 *{

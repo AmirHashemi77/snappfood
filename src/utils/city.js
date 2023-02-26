@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 export const city= [
+    
     'تهران',
     'مشهد',
     'اصفهان',

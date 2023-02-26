@@ -18,11 +18,14 @@
     .menuItem{
         font-size: .9rem;
         color: #555;
+        cursor: pointer;
+        padding: 0 10px;
 
 
-        &.active{
+       &.active{
             font-weight: bold;
             color: #333;
+            border-left:2px solid #444 ;
         }
     }
 }
