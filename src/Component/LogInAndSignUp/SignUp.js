@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import style from './passwordLogIn.module.scss';
+import style from './signUp.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSliceAction } from '../../Store/Slice/authSlice/authSlice';
 import { signUpAction } from '../../Store/action/signUpAction';
@@ -57,10 +57,12 @@ const SignUp = () => {
                 <div className={style.inputContainer}>
                     <p>نام و نام خانوادگی</p>
                     <input ref={nameInput} onChange={inputCheck} className={style.passwordInput} type="text" />
+                    <small>شامل حروف فارسی میشود، حداقل پنج کاراکتر</small>
                 </div>
                 <div className={style.inputContainer}>
                     <p>رمز عبور</p>
                     <input ref={passwordInput} onChange={inputCheck} className={style.passwordInput} type="password" />
+                    <small> شامل اعداد و کاراکتر های انگلیسی میشود ،حداقل شش کاراکتر</small>
                 </div>
                 <div className={style.footer}>
                     <button ref={signUpBtn} onClick={signUpHandler}  className={style.LogInBtn}>ثبت نام</button>
