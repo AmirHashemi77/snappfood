@@ -3,7 +3,7 @@ import { uiSliceAction } from '../Slice/uiSlice/uiSlice';
 
 
 
-export const fetchRestrantListData=(category,subcatgory)=>{
+export const fetchRestrantListData=(category)=>{
     return async(dispatch)=>{
 
         try{

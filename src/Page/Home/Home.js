@@ -27,8 +27,8 @@ const Home = () => {
             <Slider title='برترین ها' tag='top' />
             <Slider title='یک تجربه جدید' tag='newExperience' />
             <Slider title='دارای تخفیف' tag='off'/>
-            {loading &&  <AppBanner/>}
-            {loading &&  <SignInBanner/>}
+            {!loading &&  <AppBanner/>}
+            {!loading &&  <SignInBanner/>}
            </div>
            
             <CitySection/>

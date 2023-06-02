@@ -29,7 +29,7 @@ const cartSlice=createSlice({
             const availableItem=state.items.find((item)=>item.id===action.payload.id)
             if(availableItem){
                 availableItem.quantity++;
-                availableItem.totalPrice+=availableItem.price;
+             
                 state.totalPrice=state.totalPrice+availableItem.price;
                 state.totalQuantity++;
                 state.change=true

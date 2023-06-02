@@ -15,14 +15,6 @@ const authSlice=createSlice({
     name:'auth',
     initialState,
     reducers:{
-
-            logInHandler(state){
-                state.authed=true
-            },
-                    
-            logOutHandler(state){
-                state.authed=false
-            },
             authedHandler(state,action){
                 state.authed=action.payload
             },
