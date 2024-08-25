@@ -15,7 +15,8 @@ const BreadCrumb = () => {
             const currentCategory={...breadCrumbData.find((item)=>item.id ===parmas.category), link:`/service/${parmas.category}`};
             setBreadCrumbArr([currentCategory])
 
-
+            
+            
             if(parmas.subcategory){
                 const currentSubCategory={...sideBarCategory[parmas.category].find((item)=>item.id===parmas.subcategory), link:`/service/${parmas.category}/${parmas.subcategory}`}
               
@@ -32,6 +33,11 @@ const BreadCrumb = () => {
         }
        
     },[parmas.category,parmas.subcategory,parmas.twosubcategory])
+
+    useEffect(()=>{
+        console.log(breadCrumbArr); 
+    },[breadCrumbArr])
+
     useEffect(()=>{
         if(parmas.restrantId && currentRestrant.id){
             const category={...breadCrumbData.find((item)=>item.id===currentRestrant.type),link:`/service/${currentRestrant.type}`};

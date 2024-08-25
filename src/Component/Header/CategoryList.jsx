@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryItem from './CategoryItem.js';
+import CategoryItem from './CategoryItem.jsx';
 import style from './categoryList.module.scss'
 const CategoryList = () => {
     return (

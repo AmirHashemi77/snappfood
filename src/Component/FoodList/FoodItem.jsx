@@ -7,7 +7,6 @@ import { cartSliceAction } from '../../Store/Slice/cartSlice/cartSlice';
 
 const FoodItem = ({title,id,image,rate,comments,price,ingredient}) => {
     const dispatch=useDispatch();
-    
     const cartItems=useSelector((state)=>state.cart.items)
     const availableFood=cartItems.find((item)=>item.id===id)
     const foodPopUpHandle=()=>{
